@@ -6,6 +6,9 @@ import { Album } from './album.model';
   template: `
   <div class="container">
     <h1>Earworm</h1>
+    <album-list
+      [childAlbumList]="allAlbums"
+    ></album-list>
 
 
   </div>
