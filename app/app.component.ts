@@ -30,6 +30,9 @@ import { Album } from './album.model';
       </div>
       <div class="col-sm-3 well">
         <img class="icon" src="./../resources/images/cart.png"><hr>
+        <cart-display
+        [purchases] = "purchases"
+        ></cart-display>
       </div>
     </div>
   </div>
@@ -79,6 +82,17 @@ export class AppComponent {
     });
     return artistList;
   }
+
+  public purchases: Album[] = this.createPurchases();
+    createPurchases(){
+      var purchaseList: Album[] = [];
+      this.allAlbums.forEach(function(album){
+        if((purchaseList.indexOf(album) === -1) && (album.inCart === false)) {
+              purchaseList.push(album);
+            }
+      });
+      return purchaseList;
+    }
 
   selectedAlbum: Album = null;
   selectedGenre: string = "all";

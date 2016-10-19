@@ -6,6 +6,11 @@ h4, span {
   margin-left: 5%;
 }
 
+li {
+  list-style: none;
+  margin-left: -30px;
+}
+
 .form {
   width: 40%;
   display: block !important;

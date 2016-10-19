@@ -5,6 +5,7 @@ import { AlbumComponent } from './album.component';
 import { AlbumListComponent } from './album-list.component';
 import { AlbumFilterComponent } from './filter.component';
 import { FilterPipe } from './filter.pipe';
+import { CartComponent } from './cart.component';
 
 @NgModule({
   imports: [BrowserModule],
@@ -14,6 +15,7 @@ import { FilterPipe } from './filter.pipe';
     AlbumListComponent,
     AlbumFilterComponent,
     FilterPipe,
+    CartComponent,
   ],
   bootstrap:    [ AppComponent ]
 })
