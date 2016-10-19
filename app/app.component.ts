@@ -18,11 +18,11 @@ import { Album } from './album.model';
 
 export class AppComponent {
   public allAlbums: Album[] = [
-    new Album("./../resources/images/orange.jpg", "Channel Orange", "Frank Ocean", "RnB", 12),
-    new Album("./../resources/images/thewall.jpg", "The Wall", "Pink Floyd", "Rock", 10),
+    new Album("./../resources/images/orange.jpg", "Channel Orange", "Frank Ocean", "R&B", 12),
+    new Album("./../resources/images/thewall.jpg", "The Wall", "Pink Floyd", "Progressive", 10),
     new Album("./../resources/images/nevermind.jpg", "Nevermind", "Nirvana", "Grunge", 10),
     new Album("./../resources/images/currents.jpg", "Currents", "Tame Impala", "Psychedelic", 12),
-    new Album("./../resources/images/wheelseoffire.jpg", "Wheels of Fire", "Cream", "Rock", 9),
+    new Album("./../resources/images/wheelseoffire.jpg", "Wheels of Fire", "Cream", "Psychedelic", 9),
     new Album("./../resources/images/elevator.jpg", "Elevator to the Gallows", "Miles Davis", "Jazz", 10),
     new Album("./../resources/images/midnightvultures.jpg", "Midnite Vultures", "Beck", "Funk", 8),
     new Album("./../resources/images/apollo.jpg", "Live at the Apollo", "James Brown", "Funk", 10),
