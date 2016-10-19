@@ -5,7 +5,7 @@ import { AlbumComponent } from './album.component';
 @Component({
   selector: 'album-list',
   template: `
-   <div *ngFor="let album of childAlbumList">
+   <div *ngFor="let album of childAlbumList | filter:childSelectedGenre:childSelectedArtist">
       <album-display
       [album] = "album"
       ></album-display>
@@ -15,4 +15,7 @@ import { AlbumComponent } from './album.component';
 
 export class AlbumListComponent {
   @Input() childAlbumList: Album[];
+  @Input() childGenreList: String[];
+  @Input() childSelectedGenre: String;
+  @Input() childSelectedArtist: String;
 }
