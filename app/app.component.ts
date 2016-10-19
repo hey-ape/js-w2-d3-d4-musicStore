@@ -6,36 +6,46 @@ import { Album } from './album.model';
   template: `
   <div class="container">
     <h1>Earworm</h1>
-    <album-filter
-      [childGenreList] = "allGenres"
-      [childArtistList] = "allArtists"
-      (genreSender) = "selectGenre($event)"
-      (artistSender) = "selectArtist($event)"
-    ></album-filter>
-    <album-list
-      [childAlbumList] = "allAlbums"
-      [childSelectedGenre] = "selectedGenre"
-      [childSelectedArtist] = "selectedArtist"
-    ></album-list>
-
-
+    <div class="row">
+      <album-filter
+        [childGenreList] = "allGenres"
+        [childArtistList] = "allArtists"
+        (genreSender) = "selectGenre($event)"
+        (artistSender) = "selectArtist($event)"
+      ></album-filter>
+    </div>
+    <br>
+    <div class="row">
+      <album-list
+        [childAlbumList] = "allAlbums"
+        [childSelectedGenre] = "selectedGenre"
+        [childSelectedArtist] = "selectedArtist"
+      ></album-list>
+    </div>
   </div>
-
   `
 })
 
 export class AppComponent {
   public allAlbums: Album[] = [
-    new Album("./../resources/images/orange.jpg", "Channel Orange", "Frank Ocean", "R&B", 12),
     new Album("./../resources/images/thewall.jpg", "The Wall", "Pink Floyd", "Progressive", 10),
     new Album("./../resources/images/nevermind.jpg", "Nevermind", "Nirvana", "Grunge", 10),
     new Album("./../resources/images/currents.jpg", "Currents", "Tame Impala", "Psychedelic", 12),
     new Album("./../resources/images/wheelsoffire.jpg", "Wheels of Fire", "Cream", "Psychedelic", 9),
     new Album("./../resources/images/elevator.jpg", "Elevator to the Gallows", "Miles Davis", "Jazz", 10),
+    new Album("./../resources/images/orange.jpg", "Channel Orange", "Frank Ocean", "R&B", 12),
     new Album("./../resources/images/midnitevultures.jpg", "Midnite Vultures", "Beck", "Funk", 8),
     new Album("./../resources/images/apollo.jpg", "Live at the Apollo", "James Brown", "Funk", 10),
     new Album("./../resources/images/modernguilt.jpg", "Modern Guilt", "Beck", "Psychedelic", 11),
-    new Album("./../resources/images/ummagumma.jpg", "Ummagumma", "Pink Floyd", "Psychedelic", 9)
+    new Album("./../resources/images/ummagumma.jpg", "Ummagumma", "Pink Floyd", "Psychedelic", 9),
+    new Album("./../resources/images/mala.jpg", "Mala", "Devandra Banhart", "Electropop", 13),
+    new Album("./../resources/images/unnatural.jpg", "The Unnatural World", "Have a Nice Life", "Shoegaze", 12),
+    new Album("./../resources/images/mywoman.jpg", "My Woman", "Angel Olsen", "Garage", 15),
+    new Album("./../resources/images/rosewindows.jpg", "Rose Windows", "Rose Windows", "Psychedelic", 12),
+    new Album("./../resources/images/snakehymns.jpg", "Snake Hymns", "Bus Gas", "Drone", 10),
+    new Album("./../resources/images/theoryofmachines.jpg", "Theory of Machines", "Ben Frost", "Experimental", 10),
+    new Album("./../resources/images/celestial.jpg", "Music for the Celestial Din", "Garek Jon Druss", "Experimental", 8),
+    new Album("./../resources/images/pyramids.jpg", "Pyramids with Nadja", "Pyramids with Nadja", "Experimental", 8)
   ]
 
   public allGenres: String[] = this.createGenres();

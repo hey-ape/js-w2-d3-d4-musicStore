@@ -1,3 +1,30 @@
 h1 {
-  color: blue;
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+h4, span {
+  margin-left: 10px;
+}
+
+.form {
+  width: 40%;
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.btn {
+  display: inline-block;;
+  margin: 0 10px !important;
 }

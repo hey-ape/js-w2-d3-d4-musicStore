@@ -5,20 +5,24 @@ import { AlbumComponent } from './album.component';
 @Component({
   selector: 'album-filter',
   template: `
-    <label>Filter by Genre:</label>
-    <select class="form-control" (change)="genreChange($event.target.value)">
-      <option value="all">Show All</option>
-      <option *ngFor="let genre of childGenreList"
-      [value]="genre">{{ genre }}</option>
-    </select>
-    <br>
-    <label>Filter by Artist:</label>
-    <select class="form-control" (change)="artistChange($event.target.value)">
-      <option value="all">Show All</option>
-      <option *ngFor="let artist of childArtistList"
-      [value]="artist">{{ artist }}</option>
-    </select>
-    <br>
+  <div class="form">
+    <div class="col-sm-6">
+      <label>Filter by Genre:</label>
+      <select class="form-control" (change)="genreChange($event.target.value)">
+        <option value="all">Show All</option>
+        <option *ngFor="let genre of childGenreList"
+        [value]="genre">{{ genre }}</option>
+      </select>
+    </div>
+    <div class="col-sm-6">
+      <label>Filter by Artist:</label>
+      <select class="form-control" (change)="artistChange($event.target.value)">
+        <option value="all">Show All</option>
+        <option *ngFor="let artist of childArtistList"
+        [value]="artist">{{ artist }}</option>
+      </select>
+    </div>
+  </div>
   `
 })
 
