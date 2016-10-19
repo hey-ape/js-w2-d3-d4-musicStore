@@ -16,11 +16,21 @@ import { Album } from './album.model';
     </div>
     <br>
     <div class="row">
-      <album-list
-        [childAlbumList] = "allAlbums"
-        [childSelectedGenre] = "selectedGenre"
-        [childSelectedArtist] = "selectedArtist"
-      ></album-list>
+      <div class="col-sm-3 well">
+        <img class="icon" src="./../resources/images/reviews.png"><hr>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <album-list
+            [childAlbumList] = "allAlbums"
+            [childSelectedGenre] = "selectedGenre"
+            [childSelectedArtist] = "selectedArtist"
+          ></album-list>
+        </div>
+      </div>
+      <div class="col-sm-3 well">
+        <img class="icon" src="./../resources/images/cart.png"><hr>
+      </div>
     </div>
   </div>
   `

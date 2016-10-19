@@ -5,17 +5,19 @@ import { Album } from './album.model';
   selector: 'album-display',
   inputs: ['album'],
   template: `
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <div class="thumbnail">
-        <img src="{{ album.image }}">
+        <img class="cover" src="{{ album.image }}">
         <div class="caption">
           <h4>{{ album.name }}</h4>
           <span>{{ album.artist }}</span><br>
           <span>{{ album.genre }}</span><br>
           <span>{{ "$" + album.price }}</span>
           <hr>
-          <button class="btn" (click)="buyAlbum">Add to Cart</button>
-          <button class="btn" (click)="reviewAlbum">Review Album</button>
+          <div class="buttons">
+            <button class="btn" (click)="buyAlbum">Add to Cart</button>
+            <button class="btn" (click)="reviewAlbum">Review Album</button>
+          </div>
         </div>
       </div>
     </div>
