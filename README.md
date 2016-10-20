@@ -15,7 +15,7 @@ This app requires:
 
 To install:
 
-1. Clone this repository to your desktop: `git clone https://github.com/khirsch/music-store.git`
+1. Clone this repository to your desktop: `git clone https://github.com/khirsch/earmworm.git`
 2. Navigate to the 'tap-room' folder
 3. Run these commands in the following order:
   * `$ npm install`
