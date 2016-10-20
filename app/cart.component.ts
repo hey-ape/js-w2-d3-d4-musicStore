@@ -5,7 +5,7 @@ import { Album } from './album.model';
   selector: 'cart-display',
   template: `
     <div *ngIf="!purchases[0]">
-      <p class="text-center">Add items to your cart! :)</p>
+      <p class="text-center">Your cart is empty.</p>
     </div>
     <div class="row" *ngFor="let item of purchases">
       <div class="col-sm-1">
@@ -20,7 +20,7 @@ import { Album } from './album.model';
     </div>
     <hr>
     <h4 id="total"><strong>Total: {{ "$" + total + ".00" }}
-    <button class="btn pull-right" id="checkout">Checkout</button>
+    <button class="btn pull-right" id="checkout" (click)="error($event)">Checkout</button>
     </strong></h4>
   `
 })
@@ -33,6 +33,10 @@ export class CartComponent {
 
   removeAlbum(albumToRemove: Album) {
     this.clickSenderRemove.emit(albumToRemove);
+  }
+
+  error() {
+    alert("Sorry, this feature is not available in beta.");
   }
 
 }
