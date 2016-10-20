@@ -45,7 +45,7 @@ export class AppComponent {
     new Album("./../resources/images/modernguilt.jpg", "Modern Guilt", "Beck", "Psychedelic", 11),
     new Album("./../resources/images/ummagumma.jpg", "Ummagumma", "Pink Floyd", "Psychedelic", 9),
     new Album("./../resources/images/wheelsoffire.jpg", "Wheels of Fire", "Cream", "Psychedelic", 9),
-    new Album("./../resources/images/unnatural.jpg", "The Unnatural World", "Have a Nice Life", "Shoegaze", 12),
+    new Album("./../resources/images/unnatural.jpg", "The Unnatural World", "Have a Nice Life", "Post-Punk", 12),
     new Album("./../resources/images/mywoman.jpg", "My Woman", "Angel Olsen", "Alternative", 15),
     new Album("./../resources/images/rosewindows.jpg", "Rose Windows", "Rose Windows", "Psychedelic", 12),
     new Album("./../resources/images/snakehymns.jpg", "Snake Hymns", "Bus Gas", "Drone", 10),
@@ -59,7 +59,9 @@ export class AppComponent {
     new Album("./../resources/images/gilescorey.jpg", "Giles Corey",  "Giles Corey", "Gloom", 7),
     new Album("./../resources/images/brightday.jpg", "When Shall This Bright Day Begin", "Jozef van Wissem", "Modern Classical", 12),
     new Album("./../resources/images/requiem.jpg", "Requiem For Hell", "MONO", "Post-Rock", 10),
+    new Album("./../resources/images/twdylive.jpg", "Live in Reykjavik", "This Will Destroy You", "Post-Rock", 7),
     new Album("./../resources/images/strangers.jpg", "Strangers", "Marissa Nadler", "Alternative", 9),
+    new Album("./../resources/images/tobekind.jpg", "To Be Kind", "Swans", "Industrial", 11),
     new Album("./../resources/images/banana.jpg", "The Velvet Underground & Nico", "The Velvet Underground", "Avant-Garde", 10),
     new Album("./../resources/images/blackearth.jpg", "Black Earth", "Bohren & der Club of Gore", "Jazz", 11),
     new Album("./../resources/images/darkness.jpg", "Angels of Darkness, Demons of Light I", "Earth", "Post-Rock", 10),
@@ -71,11 +73,14 @@ export class AppComponent {
     new Album("./../resources/images/rituals.jpg", "Rituals, Trances & Ecstasies", "Kithkin", "Tree-Punk", 10),
     new Album("./../resources/images/thisfool.jpg", "This Fool Can Die Now", "Scout Niblett", "Alternative", 10),
     new Album("./../resources/images/hawk.jpg", "Hawk", "Mark Lanegan & Isobel Campbell", "Alternative", 10),
+    new Album("./../resources/images/lightfalls.jpg", "Light Falls", "Wrekmeister Harmonies", "Experimental", 10),
     new Album("./../resources/images/onesandsixes.jpg", "Ones and Sixes", "Low", "Slowcore", 10),
     new Album("./../resources/images/smilewound.jpg", "Smilewound", "múm", "Electronic", 11),
     new Album("./../resources/images/lostthemes.jpg", "Lost Themes", "John Carpenter", "Electronic", 10),
     new Album("./../resources/images/skeletontree.jpg", "Skeleton Tree", "Nick Cave and the Bad Seeds", "Avant-Garde", 13),
-    new Album("./../resources/images/doomed.jpg", "...Is Doomed", "Black Wing", "Electronic", 8)
+    new Album("./../resources/images/doomed.jpg", "...Is Doomed", "Black Wing", "Electronic", 8),
+    new Album("./../resources/images/blacktar.jpg", "Black Tar Prophecies Vols. 4, 5, & 6", "Grails", "Post-Rock", 9),
+    new Album("./../resources/images/jarboe.jpg", "Jarboe & Helen Money", "Jarboe & Helen Money", "Experimental", 9)
   ]
 
   public allGenres: String[] = this.createGenres();
