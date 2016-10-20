@@ -12,6 +12,10 @@ li {
   margin-left: -30px;
 }
 
+.thumbnail {
+  height: 33em;
+}
+
 .form {
   width: 40%;
   display: block !important;
@@ -74,4 +78,11 @@ li {
 #remove {
   width: 18px;
   height: auto;
+}
+
+#name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }

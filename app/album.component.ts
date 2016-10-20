@@ -9,7 +9,7 @@ import { Album } from './album.model';
       <div class="thumbnail">
         <img class="cover" src="{{ album.image }}">
         <div class="caption">
-          <h4>{{ album.name }}</h4>
+          <h4 id="name">{{ album.name }}</h4>
           <span>{{ album.artist }}</span><br>
           <span>{{ album.genre }}</span><br>
           <span>{{ "$" + album.price + ".00" }}</span>
