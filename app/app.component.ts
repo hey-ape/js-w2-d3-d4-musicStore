@@ -7,6 +7,10 @@ import { Album } from './album.model';
   <div class="container">
     <div id="header">
       <img id="logo" src="./../resources/images/logo.png" alt="Earworm">
+      <add-review
+      [childSelectedAlbum] = "selectedAlbum"
+      (doneClickedSender) = "doneReviewing()"
+      ></add-review>
       <div class="row">
         <album-filter
           [childGenreList] = "allGenres"
@@ -31,6 +35,7 @@ import { Album } from './album.model';
               [childSelectedArtist] = "selectedArtist"
               (clickSenderBuy)="buyAlbum($event)"
               (clickSenderReview)="reviewAlbum($event)"
+              [childSelectedAlbum] = "selectedAlbum"
             ></album-list>
           </div>
         </div>
@@ -143,6 +148,10 @@ export class AppComponent {
   }
 
   selectedAlbum: Album = null;
+  reviewAlbum(clickedAlbum: Album) {
+    this.selectedAlbum = clickedAlbum;
+  }
+
   selectedGenre: string = "all";
   selectedArtist: string = "all";
 
@@ -152,6 +161,10 @@ export class AppComponent {
 
   selectArtist(artist: string) {
     this.selectedArtist = artist;
+  }
+
+  doneReviewing() {
+    this.selectedAlbum = null;
   }
 
 }

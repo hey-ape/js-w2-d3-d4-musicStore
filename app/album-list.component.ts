@@ -7,6 +7,7 @@ import { AlbumComponent } from './album.component';
   template: `
    <div *ngFor="let album of childAlbumList | filter:childSelectedGenre:childSelectedArtist">
       <album-display
+      [childSelectedAlbum] = "childSelectedAlbum"
       [album] = "album"
       (clickSenderBuy)="buyAlbum($event)"
       (clickSenderReview)="reviewAlbum($event)"
@@ -16,6 +17,7 @@ import { AlbumComponent } from './album.component';
 })
 
 export class AlbumListComponent {
+  @Input() childSelectedAlbum: Album[];
   @Input() childAlbumList: Album[];
   @Input() childGenreList: String[];
   @Input() childSelectedGenre: String;

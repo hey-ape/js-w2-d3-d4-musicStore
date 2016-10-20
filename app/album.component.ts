@@ -15,16 +15,20 @@ import { Album } from './album.model';
           <span>{{ "$" + album.price + ".00" }}</span>
           <hr>
           <div class="buttons">
-            <button class="btn" (click)="reviewAlbum(album)">Review Album</button>
+            <button class="btn" (click)="reviewAlbum(album)" data-target="#addReview" data-toggle="modal">Review Album</button>
             <button class="btn" (click)="buyAlbum(album)">Add to Cart</button>
           </div>
         </div>
+        <add-review
+        [childSelectedAlbum] = "childSelectedAlbum"
+        ></add-review>
       </div>
     </div>
   `
 })
 
 export class AlbumComponent {
+  @Input() childSelectedAlbum: Album[];
   @Output() clickSenderBuy = new EventEmitter();
   @Output() clickSenderReview = new EventEmitter();
   public album: Album;
@@ -36,4 +40,5 @@ export class AlbumComponent {
   reviewAlbum(albumToReview: Album) {
     this.clickSenderReview.emit(albumToReview);
   }
+
 }

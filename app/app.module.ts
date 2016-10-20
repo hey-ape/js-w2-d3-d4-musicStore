@@ -7,11 +7,12 @@ import { AlbumListComponent } from './album-list.component';
 import { AlbumFilterComponent } from './filter.component';
 import { FilterPipe } from './filter.pipe';
 import { CartComponent } from './cart.component';
+import { AddReviewComponent } from './add-review.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { CartComponent } from './cart.component';
     AlbumFilterComponent,
     FilterPipe,
     CartComponent,
+    AddReviewComponent,
   ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
