@@ -1,5 +1,5 @@
-h1 {
-  text-align: center;
+body {
+  font-family: 'Raleway', sans-serif;
 }
 
 h4, span {
@@ -14,7 +14,7 @@ li {
 .form {
   width: 40%;
   display: block !important;
-  margin: 0 auto !important;
+  margin: 20px auto !important;
   text-align: center;
 }
 
@@ -37,6 +37,11 @@ li {
   display: block;
   margin: 0 auto;
   width: 40px;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
 }
 
 .btn {
