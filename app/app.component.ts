@@ -37,6 +37,7 @@ import { Album } from './album.model';
         <div class="col-sm-3 well">
           <img class="icon" src="./../resources/images/cart.png"><hr>
           <cart-display
+          [total] = "total"
           [purchases] = "purchases"
           (clickSenderRemove)="removeAlbum($event)"
           ></cart-display>
@@ -114,10 +115,12 @@ export class AppComponent {
   }
 
   public purchases: Album[] = [];
+  public total: number = 0;
   buyAlbum(album: Album) {
     album.inCart = true;
     if(this.purchases.indexOf(album) === -1) {
       this.purchases.push(album);
+      this.total += album.price;
     } else {
       alert("This album's already in your cart! :)")
     }
@@ -128,6 +131,13 @@ export class AppComponent {
     var index = this.purchases.indexOf(album, 0);
       if(index > -1) {
       this.purchases.splice(index, 1);
+      this.total -= album.price;
+    }
+  }
+
+  addTotal(){
+    for(var i=0; i<this.purchases.length; i++){
+      console.log(this.purchases);
     }
   }
 
