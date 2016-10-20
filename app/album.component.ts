@@ -12,11 +12,11 @@ import { Album } from './album.model';
           <h4>{{ album.name }}</h4>
           <span>{{ album.artist }}</span><br>
           <span>{{ album.genre }}</span><br>
-          <span>{{ "$" + album.price }}</span>
+          <span>{{ "$" + album.price + ".00" }}</span>
           <hr>
           <div class="buttons">
-            <button class="btn" (click)="buyAlbum(album)">Add to Cart</button>
             <button class="btn" (click)="reviewAlbum(album)">Review Album</button>
+            <button class="btn" (click)="buyAlbum(album)">Add to Cart</button>
           </div>
         </div>
       </div>
