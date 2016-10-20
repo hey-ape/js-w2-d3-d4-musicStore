@@ -5,34 +5,39 @@ import { Album } from './album.model';
   selector: 'earworm',
   template: `
   <div class="container">
-    <img class="logo" src="./../resources/images/logo.png" alt="Earworm">
-    <div class="row">
-      <album-filter
-        [childGenreList] = "allGenres"
-        [childArtistList] = "allArtists"
-        (genreSender) = "selectGenre($event)"
-        (artistSender) = "selectArtist($event)"
-      ></album-filter>
+    <div id="header">
+      <img id="logo" src="./../resources/images/logo.png" alt="Earworm">
+      <div class="row">
+        <album-filter
+          [childGenreList] = "allGenres"
+          [childArtistList] = "allArtists"
+          (genreSender) = "selectGenre($event)"
+          (artistSender) = "selectArtist($event)"
+        ></album-filter>
+      </div>
     </div>
-    <br>
-    <div class="row">
-      <div class="col-sm-3 well">
-        <img class="icon" src="./../resources/images/reviews.png"><hr>
-      </div>
-      <div class="col-sm-6">
-        <div class="row">
-          <album-list
-            [childAlbumList] = "allAlbums"
-            [childSelectedGenre] = "selectedGenre"
-            [childSelectedArtist] = "selectedArtist"
-          ></album-list>
+    <div id="spacer">
+    </div>
+    <div id="content">
+      <div class="row">
+        <div class="col-sm-3 well">
+          <img class="icon" src="./../resources/images/reviews.png"><hr>
         </div>
-      </div>
-      <div class="col-sm-3 well">
-        <img class="icon" src="./../resources/images/cart.png"><hr>
-        <cart-display
-        [purchases] = "purchases"
-        ></cart-display>
+        <div class="col-sm-6">
+          <div class="row">
+            <album-list
+              [childAlbumList] = "allAlbums"
+              [childSelectedGenre] = "selectedGenre"
+              [childSelectedArtist] = "selectedArtist"
+            ></album-list>
+          </div>
+        </div>
+        <div class="col-sm-3 well">
+          <img class="icon" src="./../resources/images/cart.png"><hr>
+          <cart-display
+          [purchases] = "purchases"
+          ></cart-display>
+        </div>
       </div>
     </div>
   </div>

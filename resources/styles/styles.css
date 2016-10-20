@@ -40,11 +40,6 @@ li {
   width: 40px;
 }
 
-.logo {
-  display: block;
-  margin: 20px auto;
-}
-
 .btn {
   background: #FFFFFF;
   color: #000000;
@@ -54,4 +49,24 @@ li {
 
 .well {
   background: #FFFFFF !important;
+}
+
+#header {
+  position: fixed;
+  height: 220px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #f2f2f2;
+  z-index: 999999;
+}
+
+#logo {
+  display: block;
+  margin: 10px auto;
+}
+
+#spacer {
+  width: 100%;
+  height: 220px;
 }
