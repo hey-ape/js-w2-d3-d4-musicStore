@@ -4,7 +4,7 @@
 
 ## Description
 
-Earworm is a web app that allows to buy albums from a music store's inventory. Albums can be filtered by genre or artist.
+Earworm is a prototype web app built with Angular2 that allows you to browse a music store's inventory. Albums can be filtered by genre or artist and then placed into a shopping cart for purchase.
 
 ## Setup/Installation Requirements
 
