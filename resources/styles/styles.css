@@ -70,3 +70,8 @@ li {
   width: 100%;
   height: 210px;
 }
+
+#remove {
+  width: 18px;
+  height: auto;
+}

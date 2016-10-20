@@ -5,7 +5,7 @@ import { Album } from './album.model';
   selector: 'cart-display',
   template: `
     <ul *ngFor="let item of purchases">
-      <li>{{item.name}} {{ "($" + item.price + ".00)" }}</li>
+      <li><img id="remove" src="./../resources/images/remove.png"> {{item.name}} {{ "($" + item.price + ".00)" }}</li>
     </ul>
   `
 })
