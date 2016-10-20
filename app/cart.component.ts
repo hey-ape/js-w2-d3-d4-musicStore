@@ -4,6 +4,9 @@ import { Album } from './album.model';
 @Component({
   selector: 'cart-display',
   template: `
+    <div *ngIf="!purchases[0]">
+      <p class="text-center">Add items to your cart! :)</p>
+    </div>
     <div class="row" *ngFor="let item of purchases">
       <div class="col-sm-1">
         <img (click)="removeAlbum(item)" id="remove" src="./../resources/images/remove.png">
@@ -16,7 +19,7 @@ import { Album } from './album.model';
       </div>
     </div>
     <hr>
-    <h4><strong>Total: {{ "$" + total + ".00" }}
+    <h4 id="total"><strong>Total: {{ "$" + total + ".00" }}
     <button class="btn pull-right" id="checkout">Checkout</button>
     </strong></h4>
   `

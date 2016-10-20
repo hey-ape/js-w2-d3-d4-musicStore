@@ -94,3 +94,7 @@ li {
 #checkout {
   margin-top: -0.5em !important;
 }
+
+#total {
+  margin-left: 1%;
+}
