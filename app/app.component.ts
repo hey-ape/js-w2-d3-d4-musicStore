@@ -123,7 +123,7 @@ export class AppComponent {
       this.purchases.push(album);
       this.total += album.price;
     } else {
-      alert("This album's already in your cart! :)")
+      alert("This album is already in your cart!")
     }
   }
 
