@@ -86,3 +86,11 @@ li {
   text-overflow: ellipsis;
   max-width: 200px;
 }
+
+#price {
+  text-align: right;
+}
+
+#checkout {
+  margin-top: -0.5em !important;
+}
