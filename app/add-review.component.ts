@@ -16,7 +16,7 @@ import { Album } from './album.model';
         </div>
         <div class="modal-footer">
           <button class="btn" data-dismiss="modal">Close</button>
-          <button class="btn" (click)="doneReviewing()">Submit</button>
+          <button class="btn" (click)="doneReviewing()" data-toggle="modal" data-target="#addReview">Submit</button>
         </div>
       </div>
     </div>
