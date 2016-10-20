@@ -49,6 +49,7 @@ li {
   background: #FFFFFF;
   color: #000000;
   border: 1px solid #000000;
+  box-shadow: 1px 1px;
 }
 
 .well {
