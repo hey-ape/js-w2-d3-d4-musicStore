@@ -21,6 +21,7 @@ import { Album } from './album.model';
         </div>
         <add-review
         [childSelectedAlbum] = "childSelectedAlbum"
+        (doneClickedSender) = "doneReviewing()"
         ></add-review>
       </div>
     </div>
@@ -31,6 +32,7 @@ export class AlbumComponent {
   @Input() childSelectedAlbum: Album[];
   @Output() clickSenderBuy = new EventEmitter();
   @Output() clickSenderReview = new EventEmitter();
+  @Output() doneClickedSender = new EventEmitter();
   public album: Album;
 
   buyAlbum(albumToBuy: Album) {
@@ -39,6 +41,10 @@ export class AlbumComponent {
 
   reviewAlbum(albumToReview: Album) {
     this.clickSenderReview.emit(albumToReview);
+  }
+
+  doneReviewing() {
+    this.doneClickedSender.emit();
   }
 
 }

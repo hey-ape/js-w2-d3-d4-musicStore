@@ -4,10 +4,20 @@ import { Album } from './album.model';
 @Component({
   selector: 'review-display',
   template: `
-
+    <div *ngIf="!reviews[0]">
+      <p class="text-center">No reviews to show.</p><hr>
+    </div>
+    <ul>
+      <div class="row" *ngFor="let album of reviews">
+        <li>
+        <h5>{{ album.name + " (" + album.artist + ")" }}</h5>
+        <p>{{ album.review }}</p>
+        </li>
+      </div>
+    </ul>
   `
 })
 
 export class ReviewDisplayComponent {
-
+  @Input() reviews: Album[];
 }

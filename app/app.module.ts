@@ -8,6 +8,7 @@ import { AlbumFilterComponent } from './filter.component';
 import { FilterPipe } from './filter.pipe';
 import { CartComponent } from './cart.component';
 import { AddReviewComponent } from './add-review.component';
+import { ReviewDisplayComponent } from './review-display.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { AddReviewComponent } from './add-review.component';
     FilterPipe,
     CartComponent,
     AddReviewComponent,
+    ReviewDisplayComponent,
   ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

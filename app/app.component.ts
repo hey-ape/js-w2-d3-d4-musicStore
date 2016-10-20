@@ -26,6 +26,9 @@ import { Album } from './album.model';
       <div class="row">
         <div class="col-sm-3 well">
           <img class="icon" src="./../resources/images/reviews.png"><hr>
+          <review-display
+            [reviews] = "reviews"
+          ></review-display>
         </div>
         <div class="col-sm-6">
           <div class="row">
@@ -35,6 +38,7 @@ import { Album } from './album.model';
               [childSelectedArtist] = "selectedArtist"
               (clickSenderBuy)="buyAlbum($event)"
               (clickSenderReview)="reviewAlbum($event)"
+              (doneClickedSender)="doneReviewing($event)"
               [childSelectedAlbum] = "selectedAlbum"
             ></album-list>
           </div>
@@ -42,9 +46,9 @@ import { Album } from './album.model';
         <div class="col-sm-3 well">
           <img class="icon" src="./../resources/images/cart.png"><hr>
           <cart-display
-          [total] = "total"
-          [purchases] = "purchases"
-          (clickSenderRemove)="removeAlbum($event)"
+            [total] = "total"
+            [purchases] = "purchases"
+            (clickSenderRemove)="removeAlbum($event)"
           ></cart-display>
         </div>
       </div>
@@ -152,6 +156,18 @@ export class AppComponent {
     this.selectedAlbum = clickedAlbum;
   }
 
+  public reviews: Album[] = [];
+  doneReviewing() {
+    var _this = this;
+    this.allAlbums.forEach(function(album){
+      if(album.review !== ""){
+        _this.reviews.push(album);
+      }
+    });
+    console.log(_this.reviews);
+    this.selectedAlbum = null;
+  }
+
   selectedGenre: string = "all";
   selectedArtist: string = "all";
 
@@ -161,10 +177,6 @@ export class AppComponent {
 
   selectArtist(artist: string) {
     this.selectedArtist = artist;
-  }
-
-  doneReviewing() {
-    this.selectedAlbum = null;
   }
 
 }

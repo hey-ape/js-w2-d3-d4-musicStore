@@ -11,6 +11,7 @@ import { AlbumComponent } from './album.component';
       [album] = "album"
       (clickSenderBuy)="buyAlbum($event)"
       (clickSenderReview)="reviewAlbum($event)"
+      (doneClickedSender) = "doneReviewing()"
       ></album-display>
    </div>
   `
@@ -24,6 +25,7 @@ export class AlbumListComponent {
   @Input() childSelectedArtist: String;
   @Output() clickSenderBuy = new EventEmitter();
   @Output() clickSenderReview = new EventEmitter();
+  @Output() doneClickedSender = new EventEmitter();
 
   buyAlbum(albumToBuy: Album) {
     this.clickSenderBuy.emit(albumToBuy);
@@ -31,5 +33,9 @@ export class AlbumListComponent {
 
   reviewAlbum(albumToReview: Album) {
     this.clickSenderReview.emit(albumToReview);
+  }
+
+  doneReviewing(review) {
+    this.doneClickedSender.emit();
   }
 }
