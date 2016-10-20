@@ -116,9 +116,10 @@ export class AppComponent {
 
   public purchases: Album[] = [];
   public total: number = 0;
+
   buyAlbum(album: Album) {
     album.inCart = true;
-    if(this.purchases.indexOf(album) === -1) {
+    if (this.purchases.indexOf(album) === -1) {
       this.purchases.push(album);
       this.total += album.price;
     } else {
