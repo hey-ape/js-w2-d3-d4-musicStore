@@ -29,6 +29,8 @@ import { Album } from './album.model';
               [childAlbumList] = "allAlbums"
               [childSelectedGenre] = "selectedGenre"
               [childSelectedArtist] = "selectedArtist"
+              (clickSenderBuy)="buyAlbum($event)"
+              (clickSenderReview)="reviewAlbum($event)"
             ></album-list>
           </div>
         </div>
@@ -36,6 +38,7 @@ import { Album } from './album.model';
           <img class="icon" src="./../resources/images/cart.png"><hr>
           <cart-display
           [purchases] = "purchases"
+          (clickSenderRemove)="removeAlbum($event)"
           ></cart-display>
         </div>
       </div>
@@ -110,16 +113,23 @@ export class AppComponent {
     return artistList;
   }
 
-  public purchases: Album[] = this.createPurchases();
-    createPurchases(){
-      var purchaseList: Album[] = [];
-      this.allAlbums.forEach(function(album){
-        if((purchaseList.indexOf(album) === -1) && (album.inCart === false)) {
-              purchaseList.push(album);
-            }
-      });
-      return purchaseList;
+  public purchases: Album[] = [];
+  buyAlbum(album: Album) {
+    album.inCart = true;
+    if(this.purchases.indexOf(album) === -1) {
+      this.purchases.push(album);
+    } else {
+      alert("This album's already in your cart! :)")
     }
+  }
+
+  removeAlbum(album: Album) {
+    album.inCart = false;
+    var index = this.purchases.indexOf(album, 0);
+      if(index > -1) {
+      this.purchases.splice(index, 1);
+    }
+  }
 
   selectedAlbum: Album = null;
   selectedGenre: string = "all";

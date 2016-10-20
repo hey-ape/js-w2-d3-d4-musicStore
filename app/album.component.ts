@@ -25,14 +25,15 @@ import { Album } from './album.model';
 })
 
 export class AlbumComponent {
-  @Output() clickSender = new EventEmitter();
+  @Output() clickSenderBuy = new EventEmitter();
+  @Output() clickSenderReview = new EventEmitter();
   public album: Album;
 
   buyAlbum(albumToBuy: Album) {
-    this.clickSender.emit(albumToBuy);
+    this.clickSenderBuy.emit(albumToBuy);
   }
 
   reviewAlbum(albumToReview: Album) {
-    this.clickSender.emit(albumToReview);
+    this.clickSenderReview.emit(albumToReview);
   }
 }
