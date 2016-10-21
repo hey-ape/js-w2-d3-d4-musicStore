@@ -160,7 +160,7 @@ export class AppComponent {
   doneReviewing() {
     var _this = this;
     this.allAlbums.forEach(function(album){
-      if(album.review !== ""){
+      if ((album.review !== "") && (_this.reviews.indexOf(album) === -1)){
         _this.reviews.push(album);
       }
     });

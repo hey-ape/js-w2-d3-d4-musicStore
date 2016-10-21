@@ -8,10 +8,11 @@ import { Album } from './album.model';
       <p class="text-center">No reviews to show.</p><hr>
     </div>
     <ul>
-      <div class="row" *ngFor="let album of reviews">
+      <div id="reviews" class="row" *ngFor="let album of reviews">
         <li>
         <h5>{{ album.name + " (" + album.artist + ")" }}</h5>
         <p>{{ album.review }}</p>
+        <hr>
         </li>
       </div>
     </ul>
