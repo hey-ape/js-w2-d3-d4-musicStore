@@ -43,7 +43,7 @@ import { Album } from './album.model';
             ></album-list>
           </div>
         </div>
-        <div class="col-sm-3 well">
+        <div id="cart" class="col-sm-3 well">
           <img class="icon" src="./../resources/images/cart.png"><hr>
           <cart-display
             [total] = "total"
